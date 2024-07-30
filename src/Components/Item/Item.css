@@ -46,6 +46,7 @@
     padding: 10px 20px;
     transition: background-color 0.3s, transform 0.2s;
     margin-bottom: 20px; 
+    text-decoration: none;
 }
 
 .botonCard:hover {

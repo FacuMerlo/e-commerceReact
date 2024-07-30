@@ -12,8 +12,8 @@ const NavBar = () => {
           <h1 className='navBar-title'>EL POTRERO</h1>
         </div>
       </Link>
-      <div>
-        <ul>
+      <div className='navBar-menu'>
+        <ul className='navBar-categories'>
           <li>
             <Link to={ '/categoria/botines' }>BOTINES</Link>
           </li>
