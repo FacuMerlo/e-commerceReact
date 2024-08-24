@@ -1,0 +1,241 @@
+.cart-container {
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    padding: 20px;
+    max-width: 900px; 
+    margin: 50px auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); 
+    background-color: #fff; 
+}
+
+.cart-frase {
+    font-size: 2em; 
+    color: #333;
+    margin-bottom: 15px; 
+    text-align: center; 
+}
+
+.sinTextDeco {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.sinTextDeco:hover {
+    color: #fff;
+}
+
+.boton-cart-msj {
+    background-color: #007bff; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-transform: uppercase; 
+    text-align: center; 
+    font-size: 1em; 
+    font-weight: bold; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    display: inline-block; 
+}
+
+.boton-cart-msj:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05); 
+}
+
+.boton-cart-msj:active {
+    background-color: #004494; 
+    transform: scale(0.98); 
+}
+.boton-cart-msj:focus {
+    outline: none; 
+    box-shadow: 0 0 5px #007bff; 
+}
+
+.bttVaciar{
+    background-color: #007bff; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-transform: uppercase; 
+    text-align: center; 
+    font-size: 1em; 
+    font-weight: bold; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    display: inline-block; 
+}
+
+.bttVaciar:hover{
+    background-color: #0056b3; 
+    transform: scale(1.05); 
+}
+
+.bttVaciar:active{
+    background-color: #004494; 
+    transform: scale(0.98); 
+}
+
+.bttVaciar:focus{
+    outline: none; 
+    box-shadow: 0 0 5px #007bff; 
+}
+
+.bttFinalizar{
+    background-color: #007bff; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-transform: uppercase; 
+    text-align: center; 
+    font-size: 1em; 
+    font-weight: bold; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    display: inline-block; 
+}
+
+.bttFinalizar:hover{
+    background-color: #0056b3; 
+    transform: scale(1.05); 
+}
+
+.bttFinalizar:active{
+    background-color: #004494; 
+    transform: scale(0.98); 
+}
+
+.bttFinalizar:focus{
+    outline: none; 
+    box-shadow: 0 0 5px #007bff; 
+}
+
+.botonesCart{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px;
+}
+
+.cartListItem{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-item{
+    width: 95%;
+    flex-direction: row;
+}
+
+.imgItem {
+    width: 5%;
+}
+
+.nombreItem {
+    font-size: 1em;
+}
+
+.precioItem {
+    font-size: 1.5em; 
+}
+
+.btn {
+    font-size: 15px;
+  }
+ 
+
+@media (max-width: 768px) {
+    .cart-container {
+        flex-direction: column; 
+        align-items: flex-start;
+        width: 90%; 
+    }
+
+    .boton-cart-msj {
+        width: 100%; 
+        padding: 15px 0; 
+        font-size: 1.2em; 
+    }
+
+    .card-item{
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .cart-frase {
+        font-size: 2em; 
+
+    }
+
+    .imgItem {
+        width: 70%;
+    }
+    
+    .nombreItem {
+        font-size: 2.5em;
+    }
+    
+    .precioItem {
+        font-size: 4em; 
+    }
+    
+    .btn {
+        font-size: 2em;
+      }
+
+    .botonItem{
+        font-size: 2em;
+    }  
+
+}
+
+@media (max-width: 480px) {
+    .boton-cart-msj {
+        font-size: 1em; 
+        padding: 12px 0; 
+    }
+
+    .cart-frase {
+        font-size: 1em; 
+
+    }
+
+    .cartListItem{
+        flex-direction: column;
+    }
+
+    .card-item{
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .cart-frase {
+        font-size: 1.5em; 
+
+    }
+
+    .imgItem {
+        width: 100%;
+    }
+    
+    .nombreItem {
+        font-size: 1.5em;
+    }
+    
+    .precioItem {
+        font-size: 2em; 
+    }
+    
+    .btn {
+        font-size: 20px;
+      }
+
+      .botonItem{
+        font-size: 1em;
+    }   
+}

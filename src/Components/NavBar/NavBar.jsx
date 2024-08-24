@@ -1,12 +1,14 @@
-import React from 'react';
-import './NavBar.css';
-import CartWidget from '../CartWidget/CartWidget';
-import { Link, NavLink } from 'react-router-dom';
+import React from 'react'
+import './NavBar.css'
+import CartWidget from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom'
+
 
 const NavBar = () => {
+
   return (
     <div className='navBar'>
-      <Link to='/'>
+      <Link className='sinTextDeco' to='/'>
         <div className='navBar-center'>
           <img src='https://i.ibb.co/gg5XfPV/logo-El-Potrero.png' alt='Logo' className='navBar-logo' />
           <h1 className='navBar-title'>EL POTRERO</h1>
@@ -26,7 +28,9 @@ const NavBar = () => {
         </ul>
       </div>
       <div className='navBar-cart'>
-        <CartWidget />
+        <Link className='sinTextDeco' to='/cart'>
+          <CartWidget />
+        </Link>
       </div>
     </div>
   );

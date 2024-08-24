@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { getProdc } from '../../asyncMock'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
 import { useParams } from 'react-router-dom'
+import { db } from '../../services/firebaseConfig'
+import { collection, getDocs, query, where } from 'firebase/firestore'
 
 
 const ItemListContainer = ({ greeting }) => {
@@ -13,15 +14,23 @@ const ItemListContainer = ({ greeting }) => {
 
   useEffect(() => {
     if (cat) {
-      getProdc()
-        .then(res => setProductos(res.filter(e => e.categoria === cat)))
-        .catch(err => setError(err))
-        .finally(() => setLoading(false))
+      const productosPorCat = query(collection(db, "productos"), where('categoria', '==', cat))
+      getDocs(productosPorCat).then(snapshot => {
+        const dataProductos = snapshot.docs.map(doc => {
+          const conId = doc.data()
+          return { id: doc.id, ...conId }
+        })
+        setProductos(dataProductos)
+      }).finally(() => setLoading(false))
     } else {
-      getProdc()
-        .then(res => setProductos(res))
-        .catch(err => setError(err))
-        .finally(() => setLoading(false))
+      const productosRef = collection(db, "productos")
+      getDocs(productosRef).then(snapshot => {
+        const dataProductos = snapshot.docs.map(doc => {
+          const conId = doc.data()
+          return { id: doc.id, ...conId }
+        })
+        setProductos(dataProductos)
+      }).finally(() => setLoading(false))
     }
   }, [cat])
 
